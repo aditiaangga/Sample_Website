@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Saya | GitHub Pages</title>
+  <title>Domain Berpindah | aditiaangga.id</title>
+  
+  <!-- Otomatis mengarahkan (redirect) ke domain baru setelah 5 detik -->
+  <meta http-equiv="refresh" content="5;url=https://aditiaangga.id">
+
   <style>
     * {
       box-sizing: border-box;
@@ -12,55 +16,93 @@
     }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f4f6f8;
+      background-color: #f8f9fa;
+      color: #212529;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
     }
-    .card {
+    .notice-card {
       background: #ffffff;
       padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       max-width: 500px;
       width: 100%;
       text-align: center;
+      border-top: 5px solid #0969da;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #fff8c5;
+      color: #9a6700;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      border: 1px solid #d4a72c;
     }
     h1 {
-      color: #0969da;
+      font-size: 1.6rem;
       margin-bottom: 12px;
-      font-size: 1.8rem;
+      color: #1f2328;
     }
     p {
       color: #57606a;
+      font-size: 0.95rem;
+      line-height: 1.5;
       margin-bottom: 24px;
     }
     .btn {
       display: inline-block;
-      background-color: #2da44e;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
+      background-color: #0969da;
+      color: #ffffff;
       text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
       font-weight: 600;
       transition: background-color 0.2s ease;
     }
     .btn:hover {
-      background-color: #2c974b;
+      background-color: #0451a5;
+    }
+    .subtext {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #8c959f;
     }
   </style>
 </head>
 <body>
 
-  <main class="card">
-    <h1>Halo, World! 👋</h1>
-    <p>Website ini berhasil di-deploy menggunakan <strong>GitHub Pages</strong> dengan custom domain.</p>
-    <a href="https://github.com" target="_blank" class="btn">Kunjungi GitHub</a>
+  <main class="notice-card">
+    <span class="badge">Pemberitahuan Migrasi</span>
+    <h1>Website Telah Berpindah!</h1>
+    <p>
+      Mulai sekarang, seluruh konten dan portofolio telah resmi dipindahkan ke domain baru kami di <strong>aditiaangga.id</strong>.
+    </p>
+    
+    <a href="https://aditiaangga.id" class="btn">Kunjungi aditiaangga.id Sekarang</a>
+
+    <p class="subtext">
+      Kamu akan diarahkan secara otomatis dalam <span id="countdown">5</span> detik...
+    </p>
   </main>
+
+  <script>
+    // Hitung mundur visual angka 5 ke 1
+    let seconds = 5;
+    const countdownEl = document.getElementById('countdown');
+    
+    const interval = setInterval(() => {
+      seconds--;
+      if (countdownEl) countdownEl.textContent = seconds;
+      if (seconds <= 0) clearInterval(interval);
+    }, 1000);
+  </script>
 
 </body>
 </html>
