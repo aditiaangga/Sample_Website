@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domain Berpindah | aditiaangga.id</title>
+  <title>We've Moved! | aditiaangga.id</title>
   
-  <!-- Otomatis mengarahkan (redirect) ke domain baru setelah 5 detik -->
+  <!-- Auto redirect to new domain after 5 seconds -->
   <meta http-equiv="refresh" content="5;url=https://aditiaangga.id">
 
   <style>
@@ -27,33 +27,32 @@
     .notice-card {
       background: #ffffff;
       padding: 40px;
-      border-radius: 12px;
+      border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      max-width: 500px;
+      max-width: 480px;
       width: 100%;
       text-align: center;
       border-top: 5px solid #0969da;
     }
     .badge {
       display: inline-block;
-      background-color: #fff8c5;
-      color: #9a6700;
+      background-color: #e1f5fe;
+      color: #0288d1;
       font-size: 0.85rem;
       font-weight: 600;
-      padding: 4px 12px;
+      padding: 6px 14px;
       border-radius: 20px;
       margin-bottom: 16px;
-      border: 1px solid #d4a72c;
     }
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.75rem;
       margin-bottom: 12px;
       color: #1f2328;
     }
     p {
       color: #57606a;
-      font-size: 0.95rem;
-      line-height: 1.5;
+      font-size: 1rem;
+      line-height: 1.6;
       margin-bottom: 24px;
     }
     .btn {
@@ -61,17 +60,18 @@
       background-color: #0969da;
       color: #ffffff;
       text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 6px;
+      padding: 12px 28px;
+      border-radius: 8px;
       font-weight: 600;
-      transition: background-color 0.2s ease;
+      transition: background-color 0.2s ease, transform 0.1s ease;
     }
     .btn:hover {
       background-color: #0451a5;
+      transform: translateY(-1px);
     }
     .subtext {
-      margin-top: 20px;
-      font-size: 0.8rem;
+      margin-top: 24px;
+      font-size: 0.85rem;
       color: #8c959f;
     }
   </style>
@@ -79,21 +79,20 @@
 <body>
 
   <main class="notice-card">
-    <span class="badge">Pemberitahuan Migrasi</span>
-    <h1>Website Telah Berpindah!</h1>
+    <span class="badge">New Home 🚀</span>
+    <h1>We’ve Moved!</h1>
     <p>
-      Mulai sekarang, seluruh konten dan portofolio telah resmi dipindahkan ke domain baru kami di <strong>aditiaangga.id</strong>.
+      Hey there! This site has officially relocated to <strong>aditiaangga.id</strong>. Head over to check out the updated space!
     </p>
     
-    <a href="https://aditiaangga.id" class="btn">Kunjungi aditiaangga.id Sekarang</a>
+    <a href="https://aditiaangga.id" class="btn">Take Me There</a>
 
     <p class="subtext">
-      Kamu akan diarahkan secara otomatis dalam <span id="countdown">5</span> detik...
+      Redirecting you automatically in <span id="countdown">5</span>s...
     </p>
   </main>
 
   <script>
-    // Hitung mundur visual angka 5 ke 1
     let seconds = 5;
     const countdownEl = document.getElementById('countdown');
     
